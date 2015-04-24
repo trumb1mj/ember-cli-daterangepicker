@@ -54,6 +54,10 @@ export default Ember.Component.extend({
         picker.setStartDate(moment());
         picker.setEndDate(moment());
       }
+      else{
+        picker.setStartDate(moment(self.get('start')));
+        picker.setEndDate(moment(self.get('end')));
+      }
     });
   }
 });
